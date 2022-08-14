@@ -8,7 +8,7 @@ package entites;
  *
  * @author USER
  */
-public class produit {
+public class Produit {
    private int id_produit;
    private int reference_produit;
    private String nom_produit;
@@ -17,10 +17,20 @@ public class produit {
    private String sexe;
    private float prix_produit;
 
-    public produit() {
+    public Produit() {
     }
 
-    public produit(int id_produit, int reference_produit, String nom_produit, String marque_produit, String categorie_produit, String sexe, float prix_produit) {
+    public Produit(int reference_produit, String nom_produit, String marque_produit, String categorie_produit, String sexe, float prix_produit) {
+        this.reference_produit = reference_produit;
+        this.nom_produit = nom_produit;
+        this.marque_produit = marque_produit;
+        this.categorie_produit = categorie_produit;
+        this.sexe = sexe;
+        this.prix_produit = prix_produit;
+    }
+    
+
+    public Produit(int id_produit, int reference_produit, String nom_produit, String marque_produit, String categorie_produit, String sexe, float prix_produit) {
         this.id_produit = id_produit;
         this.reference_produit = reference_produit;
         this.nom_produit = nom_produit;
@@ -109,7 +119,7 @@ public class produit {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final produit other = (produit) obj;
+        final Produit other = (Produit) obj;
         return this.id_produit == other.id_produit;
     }
    
